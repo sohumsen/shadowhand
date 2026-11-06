@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Make shadow puppets with your bare hands and watch them come alive on your own wall. A hands-only puzzle game for Meta Quest." />
+    <meta name="theme-color" content="#120b08" />
+    <link rel="icon" href="data:," />
+    <title>Shadowhand</title>
+    <style>
+      /* What is on the page while the game itself is still arriving (several seconds on a
+         headset's Wi-Fi): the same dark room and title as the real title screen, not a
+         white page. The game removes #boot when it is ready. */
+      html,
+      body {
+        margin: 0;
+        background: #120b08;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 5vh 5vw;
+        box-sizing: border-box;
+        color: #f4cf8a;
+        font-family: Georgia, 'Times New Roman', serif;
+      }
+      #boot h1 {
+        margin: 0;
+        font-size: clamp(40px, 7vw, 92px);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1;
+      }
+      #boot p {
+        margin: 12px 0 22px;
+        font-size: clamp(15px, 2vw, 24px);
+        color: #e9b96a;
+        animation: boot-breathe 2.4s ease-in-out infinite;
+      }
+      @keyframes boot-breathe {
+        50% {
+          opacity: 0.45;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #boot p {
+          animation: none;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-Ddh2MIIz.js"></script>
+  </head>
+  <body>
+    <div id="boot">
+      <h1>Shadowhand</h1>
+      <p>Lighting the lantern&hellip;</p>
+    </div>
+    <div id="scene-container"></div>
+  </body>
+</html>
